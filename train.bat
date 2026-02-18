@@ -7,9 +7,8 @@ echo.
 
 cd /d "%~dp0"
 
-where python >nul 2>&1
-if %errorlevel% neq 0 (
-    echo [ERROR] Python not found. Please install Python and add it to PATH.
+if not exist "venv\Scripts\python.exe" (
+    echo [ERROR] Virtual environment not found. Run: py -3.11 -m venv venv
     pause
     exit /b 1
 )
@@ -17,7 +16,7 @@ if %errorlevel% neq 0 (
 echo [INFO] Starting training...
 echo.
 
-python train.py %*
+venv\Scripts\python.exe train.py %*
 
 echo.
 if %errorlevel% neq 0 (

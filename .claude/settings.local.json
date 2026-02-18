@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(py:*)",
+      "Bash(winget install:*)",
+      "Bash(\"C:/Users/om/Music/brain-main/venv/Scripts/pip.exe\" install -r \"C:/Users/om/Music/brain-main/requirements.txt\")",
+      "Bash(where:*)",
+      "Bash(\"C:/Users/om/Music/brain-main/venv/Scripts/pip.exe\" install:*)",
+      "Bash(\"C:/Users/om/Music/brain-main/venv/Scripts/kaggle.exe\" datasets download -d masoudnickparvar/brain-tumor-mri-dataset -p \"C:/Users/om/Music/brain-main/data/raw\" --unzip)",
+      "Bash(dir:*)"
+    ]
+  }
+}
