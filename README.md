@@ -57,25 +57,7 @@ brain-tumor-detection/
 └── logs/                     # Training logs
 ```
 
-## Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/brain-tumor-detection.git
-cd brain-tumor-detection
-```
-
-2. Create virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-```
-
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
 
 ## Dataset
 
@@ -96,42 +78,7 @@ data/raw/
 **Dataset Sources:**
 - [Kaggle Brain Tumor MRI Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
 
-## Usage
 
-### Training
-
-```bash
-# Basic training
-python train.py
-
-# Custom parameters
-python train.py --epochs 50 --batch_size 16 --lr 0.0001
-
-# Use lightweight model
-python train.py --model xfarmer_lite
-```
-
-### Evaluation
-
-```bash
-python evaluate.py --model_path models/saved/xfarmer_final.keras
-```
-
-### Inference
-
-```bash
-# Single image
-python predict.py --image path/to/mri_scan.jpg
-
-# Multiple images
-python predict.py --image_dir path/to/images/ --show
-```
-
-### Web Application
-
-```bash
-streamlit run app/streamlit_app.py
-```
 
 ## X-Farmer Model Architecture
 
@@ -171,15 +118,7 @@ Output (4 classes) → Softmax
 | Recall (Macro) | ~94% |
 | F1-Score (Macro) | ~94% |
 
-*Results may vary based on dataset and training configuration.*
-
-## Configuration
-
-Modify `config.py` to adjust:
-- Image size and preprocessing parameters
-- Model architecture (filters, layers, dropout)
-- Training hyperparameters (epochs, batch size, learning rate)
-- Data augmentation settings
+*
 
 ## Technologies
 
@@ -190,20 +129,4 @@ Modify `config.py` to adjust:
 - **Matplotlib/Seaborn** - Visualization
 - **Streamlit** - Web application
 
-## License
 
-This project is for educational purposes only.
-
-## Disclaimer
-
-This tool is designed for educational and research purposes. It should NOT be used for actual medical diagnosis. Always consult qualified medical professionals for health-related decisions.
-
-## Author
-
-Your Name
-
-## Acknowledgments
-
-- Dataset providers on Kaggle
-- TensorFlow/Keras team
-- Medical imaging research community
